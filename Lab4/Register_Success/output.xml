@@ -1,140 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2025-12-24T21:14:20.358249" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-01T17:58:09.079974" rpa="false" schemaversion="5">
 <suite id="s1" name="Register Success" source="D:\KKU3-2\SE\LAB4_GIT\TestAutomationLab\Lab4\Register_Success\Register_Success.robot">
-<test id="s1-t1" name="Open Workshop Register Page" line="14">
+<test id="s1-t1" name="Register Success" line="22">
+<kw name="Open Workshop Register Page" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:20.526207" level="INFO">Opening browser 'chrome' to base url 'http://localhost:7272/Lab4/Registration.html'.</msg>
+<msg time="2026-01-01T17:58:09.252227" level="INFO">Opening browser 'chrome' to base url 'http://localhost:7272/Lab4/Registration.html'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-24T21:14:20.526207" elapsed="1.218739"/>
+<status status="PASS" start="2026-01-01T17:58:09.252227" elapsed="1.173350"/>
 </kw>
-<status status="PASS" start="2025-12-24T21:14:20.524905" elapsed="1.220041"/>
-</test>
-<test id="s1-t2" name="Register Success" line="17">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-01T17:58:10.425577" elapsed="0.028418"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-01T17:58:10.463380" level="INFO">Current location is 'http://localhost:7272/Lab4/Registration.html'.</msg>
+<arg>http://localhost:7272/Lab4/Registration.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-01-01T17:58:10.458306" elapsed="0.005074"/>
+</kw>
+<status status="PASS" start="2026-01-01T17:58:09.251200" elapsed="1.212180"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:21.746256" level="INFO">Typing text 'Somyod' into text field 'id=firstname'.</msg>
+<msg time="2026-01-01T17:58:10.464444" level="INFO">Typing text 'Somyod' into text field 'id=firstname'.</msg>
 <arg>id=firstname</arg>
 <arg>${FIRSTNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:21.746256" elapsed="0.117145"/>
+<status status="PASS" start="2026-01-01T17:58:10.463380" elapsed="0.086482"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:21.865913" level="INFO">Typing text 'Sodsai' into text field 'id=lastname'.</msg>
+<msg time="2026-01-01T17:58:10.552848" level="INFO">Typing text 'Sodsai' into text field 'id=lastname'.</msg>
 <arg>id=lastname</arg>
 <arg>${LASTNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:21.864907" elapsed="0.059757"/>
+<status status="PASS" start="2026-01-01T17:58:10.549862" elapsed="0.065961"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:21.926048" level="INFO">Typing text 'CS KKU' into text field 'id=organization'.</msg>
+<msg time="2026-01-01T17:58:10.615823" level="INFO">Typing text 'CS KKU' into text field 'id=organization'.</msg>
 <arg>id=organization</arg>
 <arg>${ORGANNIZATION}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:21.924664" elapsed="0.071942"/>
+<status status="PASS" start="2026-01-01T17:58:10.615823" elapsed="0.064192"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:21.998097" level="INFO">Typing text 'somyod@kkumail.com' into text field 'id=email'.</msg>
+<msg time="2026-01-01T17:58:10.684634" level="INFO">Typing text 'somyod@kkumail.com' into text field 'id=email'.</msg>
 <arg>id=email</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:21.998097" elapsed="0.069872"/>
+<status status="PASS" start="2026-01-01T17:58:10.684634" elapsed="0.085013"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:22.069447" level="INFO">Typing text '091-001-1234' into text field 'id=phone'.</msg>
+<msg time="2026-01-01T17:58:10.769647" level="INFO">Typing text '091-001-1234' into text field 'id=phone'.</msg>
 <arg>id=phone</arg>
 <arg>${PHONE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:22.067969" elapsed="0.064337"/>
+<status status="PASS" start="2026-01-01T17:58:10.769647" elapsed="0.083730"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:22.132306" level="INFO">Clicking button 'id=registerButton'.</msg>
+<msg time="2026-01-01T17:58:10.854964" level="INFO">Clicking button 'id=registerButton'.</msg>
 <arg>id=registerButton</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:22.132306" elapsed="0.059764"/>
+<status status="PASS" start="2026-01-01T17:58:10.854964" elapsed="0.095209"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-24T21:14:27.193382" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-24T21:14:22.193070" elapsed="5.000312"/>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-01T17:58:10.957595" level="INFO">Page title is 'Success'.</msg>
+<arg>Success</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-01-01T17:58:10.950173" elapsed="0.007422"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-01-01T17:58:10.964906" level="INFO">Current page contains text 'Thank you for registering with us.'.</msg>
+<arg>Thank you for registering with us.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-01-01T17:58:10.957595" elapsed="0.007311"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-01-01T17:58:10.979917" level="INFO">Current page contains text 'We will send a confirmation to your email soon.'.</msg>
+<arg>We will send a confirmation to your email soon.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-01-01T17:58:10.969458" elapsed="0.010459"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-24T21:14:27.193382" elapsed="2.098257"/>
+<status status="PASS" start="2026-01-01T17:58:10.979917" elapsed="2.079903"/>
 </kw>
-<status status="PASS" start="2025-12-24T21:14:21.744946" elapsed="7.546693"/>
+<status status="PASS" start="2026-01-01T17:58:09.251200" elapsed="3.808620"/>
 </test>
-<test id="s1-t3" name="Open Workshop Register Page" line="27">
+<test id="s1-t2" name="Register Success No Organization Info" line="33">
+<kw name="Open Workshop Register Page" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:29.294632" level="INFO">Opening browser 'chrome' to base url 'http://localhost:7272/Lab4/Registration.html'.</msg>
+<msg time="2026-01-01T17:58:13.059820" level="INFO">Opening browser 'chrome' to base url 'http://localhost:7272/Lab4/Registration.html'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-24T21:14:29.293637" elapsed="1.296942"/>
+<status status="PASS" start="2026-01-01T17:58:13.059820" elapsed="1.222634"/>
 </kw>
-<status status="PASS" start="2025-12-24T21:14:29.292632" elapsed="1.298957"/>
-</test>
-<test id="s1-t4" name="Register Success No Organization Info" line="30">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-01T17:58:14.282454" elapsed="0.036610"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-01T17:58:14.327767" level="INFO">Current location is 'http://localhost:7272/Lab4/Registration.html'.</msg>
+<arg>http://localhost:7272/Lab4/Registration.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-01-01T17:58:14.319064" elapsed="0.008703"/>
+</kw>
+<status status="PASS" start="2026-01-01T17:58:13.059820" elapsed="1.267947"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:30.592588" level="INFO">Typing text 'Somyod' into text field 'id=firstname'.</msg>
+<msg time="2026-01-01T17:58:14.328796" level="INFO">Typing text 'Somyod' into text field 'id=firstname'.</msg>
 <arg>id=firstname</arg>
 <arg>${FIRSTNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:30.592588" elapsed="0.107218"/>
+<status status="PASS" start="2026-01-01T17:58:14.327767" elapsed="0.084991"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:30.699806" level="INFO">Typing text 'Sodsai' into text field 'id=lastname'.</msg>
+<msg time="2026-01-01T17:58:14.413766" level="INFO">Typing text 'Sodsai' into text field 'id=lastname'.</msg>
 <arg>id=lastname</arg>
 <arg>${LASTNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:30.699806" elapsed="0.073251"/>
+<status status="PASS" start="2026-01-01T17:58:14.412758" elapsed="0.068480"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:30.774566" level="INFO">Typing text 'somyod@kkumail.com' into text field 'id=email'.</msg>
+<msg time="2026-01-01T17:58:14.481238" level="INFO">Typing text 'somyod@kkumail.com' into text field 'id=email'.</msg>
 <arg>id=email</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:30.774566" elapsed="0.085973"/>
+<status status="PASS" start="2026-01-01T17:58:14.481238" elapsed="0.074755"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:30.861545" level="INFO">Typing text '091-001-1234' into text field 'id=phone'.</msg>
+<msg time="2026-01-01T17:58:14.559809" level="INFO">Typing text '091-001-1234' into text field 'id=phone'.</msg>
 <arg>id=phone</arg>
 <arg>${PHONE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:30.861545" elapsed="0.079025"/>
+<status status="PASS" start="2026-01-01T17:58:14.559809" elapsed="0.068207"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-24T21:14:30.940570" level="INFO">Clicking button 'id=registerButton'.</msg>
+<msg time="2026-01-01T17:58:14.628016" level="INFO">Clicking button 'id=registerButton'.</msg>
 <arg>id=registerButton</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T21:14:30.940570" elapsed="0.112057"/>
+<status status="PASS" start="2026-01-01T17:58:14.628016" elapsed="0.073680"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-24T21:14:36.054047" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-24T21:14:31.053629" elapsed="5.000418"/>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-01T17:58:14.719733" level="INFO">Page title is 'Success'.</msg>
+<arg>Success</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-01-01T17:58:14.702165" elapsed="0.018583"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-01-01T17:58:14.731183" level="INFO">Current page contains text 'Thank you for registering with us.'.</msg>
+<arg>Thank you for registering with us.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-01-01T17:58:14.720748" elapsed="0.010435"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-01-01T17:58:14.740329" level="INFO">Current page contains text 'We will send a confirmation to your email soon.'.</msg>
+<arg>We will send a confirmation to your email soon.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-01-01T17:58:14.731183" elapsed="0.009146"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-24T21:14:36.054047" elapsed="2.121650"/>
+<status status="PASS" start="2026-01-01T17:58:14.741374" elapsed="2.088082"/>
 </kw>
-<status status="PASS" start="2025-12-24T21:14:30.591589" elapsed="7.585104"/>
+<status status="PASS" start="2026-01-01T17:58:13.059820" elapsed="3.770140"/>
 </test>
-<status status="PASS" start="2025-12-24T21:14:20.359245" elapsed="17.817448"/>
+<status status="PASS" start="2026-01-01T17:58:09.089128" elapsed="7.740832"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Register Success" id="s1" pass="4" fail="0" skip="0">Register Success</stat>
+<stat name="Register Success" id="s1" pass="2" fail="0" skip="0">Register Success</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-12-24T21:14:29.292632" level="WARN">Multiple tests with name 'Open Workshop Register Page' executed in suite 'Register Success'.</msg>
 </errors>
 </robot>

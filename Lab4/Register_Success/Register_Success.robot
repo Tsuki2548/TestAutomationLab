@@ -1,5 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
+Test Setup        Open Workshop Register Page
+Test Teardown     Close Browser
 
 *** Variables ***
 ${URL}    http://localhost:7272/Lab4/Registration.html
@@ -10,10 +12,13 @@ ${ORGANNIZATION}    CS KKU
 ${EMAIL}    somyod@kkumail.com
 ${PHONE}    091-001-1234
 
-*** Test Cases ***
+*** Keywords ***
 Open Workshop Register Page
     Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window
+    Location Should Be    http://localhost:7272/Lab4/Registration.html
 
+*** Test Cases ***
 Register Success
     Input Text    id=firstname    ${FIRSTNAME}
     Input Text    id=lastname    ${LASTNAME}
@@ -21,11 +26,9 @@ Register Success
     Input Text    id=email    ${EMAIL}
     Input Text    id=phone    ${PHONE}
     Click Button    id=registerButton
-    Sleep    5s
-    Close Browser
-
-Open Workshop Register Page
-    Open Browser    ${URL}    ${BROWSER}
+    Title Should Be    Success
+    Page Should Contain    Thank you for registering with us.
+    Page Should Contain    We will send a confirmation to your email soon.
 
 Register Success No Organization Info
     Input Text    id=firstname    ${FIRSTNAME}
@@ -33,5 +36,6 @@ Register Success No Organization Info
     Input Text    id=email    ${EMAIL}
     Input Text    id=phone    ${PHONE}
     Click Button    id=registerButton
-    Sleep    5s
-    Close Browser
+    Title Should Be    Success
+    Page Should Contain    Thank you for registering with us.
+    Page Should Contain    We will send a confirmation to your email soon.
